@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+    
+}
+
+.site{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar h2{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar h2:hover{
+    color: aqua;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #96f5eb;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+.navbar ul li a:hover{
+    color: rgb(131, 243, 97) ;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 1px;
+}
+.content p{
+    margin-top: 5px auto;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: medium;
+
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid rgb(110, 209, 80);
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+span{
+    background:  rgb(110, 209, 80);
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+button:hover span{
+    width: 100%;
+
+}
+
+@media only screen and (max-width:750px) {
+    .navbar{
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+   
+    .navbar ul li a{
+        text-decoration: none;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .navbar h2{
+        font-size: 21px;
+        padding: 25px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 41%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+    }
+    .content h1{
+        font-size: 45px;
+        margin-top: 3px;
+    }
+}
